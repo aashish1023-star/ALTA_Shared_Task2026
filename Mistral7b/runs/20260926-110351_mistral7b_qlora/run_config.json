@@ -1,0 +1,30 @@
+{
+  "run_id": "20260926-110351_mistral7b_qlora",
+  "timestamp": "2026-09-26T11:03:51.293432",
+  "model_name": "mistralai/Mistral-7B-v0.3",
+  "max_length": 128,
+  "seed": 42,
+  "task_configs": {
+    "sentiment": {
+      "epochs": 4,
+      "batch_size": 4,
+      "grad_accum": 8,
+      "lr": 0.0002,
+      "warmup_ratio": 0.06,
+      "gamma": 0.0,
+      "label_smoothing": 0.05,
+      "patience": 2
+    },
+    "sarcasm": {
+      "epochs": 6,
+      "batch_size": 4,
+      "grad_accum": 8,
+      "lr": 0.0002,
+      "warmup_ratio": 0.06,
+      "gamma": 2.0,
+      "label_smoothing": 0.0,
+      "patience": 3
+    }
+  },
+  "data_dir": "/kaggle/input/datasets/tensor77/train44"
+}

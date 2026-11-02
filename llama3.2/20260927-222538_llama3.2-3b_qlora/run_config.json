@@ -1,0 +1,30 @@
+{
+  "run_id": "20260927-222538_llama3.2-3b_qlora",
+  "timestamp": "2026-09-27T22:25:38.896693",
+  "model_name": "meta-llama/Llama-3.2-3B",
+  "max_length": 128,
+  "seed": 42,
+  "task_configs": {
+    "sentiment": {
+      "epochs": 4,
+      "batch_size": 4,
+      "grad_accum": 8,
+      "lr": 0.0002,
+      "warmup_ratio": 0.06,
+      "gamma": 0.0,
+      "label_smoothing": 0.05,
+      "patience": 2
+    },
+    "sarcasm": {
+      "epochs": 6,
+      "batch_size": 4,
+      "grad_accum": 8,
+      "lr": 0.0002,
+      "warmup_ratio": 0.06,
+      "gamma": 2.0,
+      "label_smoothing": 0.0,
+      "patience": 3
+    }
+  },
+  "data_dir": "/kaggle/input/datasets/asdfqwerty777/dataset"
+}

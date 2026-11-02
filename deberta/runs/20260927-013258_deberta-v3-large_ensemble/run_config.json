@@ -1,0 +1,43 @@
+{
+  "run_id": "20260927-013258_deberta-v3-large_ensemble",
+  "timestamp": "2026-09-27T01:32:58.194729",
+  "model_name": "microsoft/deberta-v3-large",
+  "max_length": 256,
+  "grad_accum_steps": 4,
+  "seeds": [
+    42,
+    1337,
+    2026,
+    7,
+    99
+  ],
+  "task_configs": {
+    "sentiment": {
+      "epochs": 8,
+      "batch_size": 4,
+      "lr": 1e-05,
+      "patience": 3,
+      "label_smoothing": 0.05,
+      "layer_decay": 0.9,
+      "classifier_dropout": 0.1,
+      "weight_key": "variety",
+      "extra_multiplier": null,
+      "train_source_filter": null
+    },
+    "sarcasm": {
+      "epochs": 12,
+      "batch_size": 4,
+      "lr": 8e-06,
+      "patience": 4,
+      "label_smoothing": 0.1,
+      "layer_decay": 0.85,
+      "classifier_dropout": 0.2,
+      "weight_key": "group_key",
+      "extra_multiplier": null,
+      "train_source_filter": "reddit"
+    }
+  },
+  "data_dir": "C:\\Users\\X\\Desktop\\X\\ALTA\\alta2026_public_data",
+  "use_bf16": true,
+  "use_fp16": false
+}

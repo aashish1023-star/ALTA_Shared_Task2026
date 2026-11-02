@@ -1,0 +1,35 @@
+{
+  "run_id": "20260923-090034_deberta-v3-large",
+  "timestamp": "2026-09-23T09:00:34.280110",
+  "model_name": "microsoft/deberta-v3-large",
+  "max_length": 256,
+  "grad_accum_steps": 4,
+  "seed": 42,
+  "task_configs": {
+    "sentiment": {
+      "epochs": 8,
+      "batch_size": 4,
+      "lr": 1e-05,
+      "patience": 3,
+      "label_smoothing": 0.05,
+      "layer_decay": 0.9,
+      "classifier_dropout": 0.1,
+      "weight_key": "variety",
+      "extra_multiplier": null
+    },
+    "sarcasm": {
+      "epochs": 12,
+      "batch_size": 4,
+      "lr": 8e-06,
+      "patience": 4,
+      "label_smoothing": 0.1,
+      "layer_decay": 0.85,
+      "classifier_dropout": 0.2,
+      "weight_key": "source",
+      "extra_multiplier": null
+    }
+  },
+  "data_dir": "C:\\Users\\X\\Desktop\\X\\ALTA\\alta2026_public_data",
+  "use_bf16": true,
+  "use_fp16": false
+}

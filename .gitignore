@@ -1,0 +1,12 @@
+# Large training checkpoints and model weights are stored outside GitHub.
+*.pt
+*.safetensors
+
+# Documentation is kept out of the repository except for the contributor guide.
+*.md
+!/README.md
+
+# Paper sources, submissions, and local paper collection.
+Association_for_Computational_Linguistics__ACL__conference__1_/
+research_papers/
+system_paper/
